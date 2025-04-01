@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+#list .sy{ height:20px;}
+#list .sy a{ color:#666666}
+#list .ss{}
+#list .ss .qbss{ width:188px; border: 1px solid #e8e8e8; float:left}
+#list .ss .qbss .tit{height:41px; line-height:41px; font-size:14px; font-weight:bold; padding-left:10px;border-bottom: 1px solid #e8e8e8}
+#list .ss .qbss ul{}
+#list .ss .qbss ul li{ border-bottom: 1px solid #e8e8e8; line-height:37px; font-weight:bold; padding-left:25px; background:url(../img/icon12.png) 10px 15px no-repeat; width:160px}
+#list .ss .qbss ul li img{margin-top:10px;}
+#list .ss .qbss ul li a{color:#666666}
+#list .ss .qbss ul li ul li{background:none; width:135px; border:none}
+#list .form{ border: 1px solid #e8e8e8; width:998px; margin-left:8px; float:left; position:relative}
+#list .form p strong{font-size:18px; color:#1e88e2; margin:10px}
+#list .form p { padding:10px}
+#list .form p span{font-size:14px; color:#1e88e2}
+#list .form p { width:900px; margin-left:40px; border-bottom: 1px solid #e8e8e8}
+#list .form input{margin-left:50px; margin-top:20px; margin-bottom:10px;}
+#list .form  .sub{background:#1e88e2; border:1px #1e88e2 solid; position:absolute; right:40px; color:#ffffff}
+#list .form label{ padding-left:40px; margin-top:20px}
+#list .form  .sub1{background:#1e88e2; border:1px #1e88e2 solid; margin-left:400px; width:100px; height:30px; font-size:14px; color:#FFFFFF }
+#list .form .ul { width:998px; border: 1px solid #e8e8e8; background:#f5f5f5; height:20px;}
+#list .form .ul li a{ height:20px; line-height:20px; padding:0 10px 0 10px ; display:block;float:left; color:#333333;}
+#list .form .ul li a:hover {background:#ffffff; display:block; height:20px; line-height:20px; padding:0 10px 0 10px }
+#list .form .ul1 li{ float:left; width:210px; padding:19px;}
+#list .form .ul1 li dt img{width:160px; background:none; height:120px}
+#list .form .ul1 li dd{padding:10px;}
+#list .form .ul1 li dd p{ font-size:14px; color:#1e88e2; border:none}
+#list .form .yema{}
+#list .form .yema a{padding-right:10px;}
+#list .form .yema input{padding-right:10px; margin-top:-2px; width:20px; margin-left:10px}

@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+#xiugai .header{ height:58px; width:1200px; border-bottom:1px solid #1e88e2; margin: 0 auto}
+#xiugai .header h1{padding:10px;}
+#xiugai .header img{height:30px;}
+#xiugai .header a{color:#1e88e2; font-size:14px; margin:25px 20px 0 10px; float:left; font-weight:bold}
+#xiugai .ss{margin:15px 0 0 0; width:380px; height:32px; background:#1e88e2;}
+#xiugai .header .ss input{color:#d6d6d6; margin:2px 0 0 2px; width:313px; height:26px;}
+#xiugai .ss a{margin:8px 0 0 8px; color:#FFFFFF; background:url(../img/icon1.png) no-repeat 36px 2px; width:40px; height:26px}
+#xiugai .ss a:hover{color:#000000; background:url(../img/icon6.png) no-repeat 36px 2px}
+#xiugai .header .a{margin-left:350px; margin-top:40px}
+#xiugai .content{margin-top:20px; margin: 0 auto; width:1200px;}
+#xiugai .content .left{ border:1px solid #CCCCCC; padding:10px; float:left; width:130px; margin:10px 30px 0 30px; float:left; padding-top:15px; margin-top:15px}
+#xiugai .content .left ul li{padding:10px 10px 10px 10px;}
+#xiugai .content .left ul li a{ color:#666666; font-size:14px;}
+#xiugai .content .mid{border:1px solid #CCCCCC; margin-top:15px; width:600px; float:left}
+#xiugai .content .mid .xg{ background:#f5f5f5; height:20px; line-height:20px; padding-left:20px;}
+#xiugai .content .mid .xg p {font-size:14px}
+#xiugai .content .mid form{ padding-left:10px}
+#xiugai .content .mid  form .img{ border:1px solid #f5f5f5}
+#xiugai .content .mid form input,select{margin-top:20px;margin-left:20px;}
+#xiugai .content .mid form label{margin-top:20px; margin-left:20px}
+#xiugai .content .mid form .aa{margin-left :44px}
+#xiugai .content .mid  form .submit{width:100px; border:1px solid #1e88e2; background: #1e88e2; color:#FFFFFF; margin-bottom:10px; margin-left:30px; height:30px}
+#xiugai .content .mid form .bb{ width:80px; padding:0 ; margin:0}
+#xiugai .content .right{ width:252px; float:left; margin-top:15px; margin-left:35px}
+#xiugai .content .right .top{border: #CCCCCC 1px solid}
+#xiugai .content .right .top .title{ width:250px; height:40px ;background:#6ec884 url(../img/clock.png) no-repeat 12px 12px;}
+#xiugai .content .right .top .title p{line-height: 40px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF}
+#xiugai .content .right .top .con p{text-align:center; font-size:14px; line-height:20px; padding-top:20px; color:#55b36c; }
+#xiugai .content .right .top .con{ height:120px; width:250px; background:#f5f5f5;}
+#xiugai .content .right .top .con .p{text-align:center; font-size:36px; padding-bottom:10px; line-height:48px;font-weight:bold;}
+#xiugai .content .right .top1 .title{ width:250px; height:40px ;background:#1e88e2 url(../img/cl.png) no-repeat 12px 12px;}
+#xiugai .content .right .top1 .title p{line-height: 40px; text-align:center; font-size:14px; font-weight:bold; color:#FFFFFF}
+#xiugai .content .right .top1 .con{ height:120px; width:250px; background:#f5f5f5;}
+#xiugai .content .right .top1 .con ul li{ float:left; padding:46px 0 0 20px; width:40px}
+#xiugai .content .right .top1 .con ul .li1{ background:url(../img/icon01.png) no-repeat 25px 12px;}
+#xiugai .content .right .top1 .con ul .li2{ background:url(../img/icon02.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1 .con ul .li3{ background:url(../img/icon03.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1 .con ul .li4{ background:url(../img/icon04.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1 .con ul .li5{ background:url(../img/icon05.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1 .con ul .li6{ background:url(../img/icon06.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1 .con ul .li7{ background:url(../img/icon07.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1 .con ul .li8{ background:url(../img/icon08.png) no-repeat 21px 12px;}
+#xiugai .content .right .top1{border: #CCCCCC 1px solid; margin-top:20px}

@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+#two #banner{width:1200px; padding-top:8px; margin:0 auto}
+#two #banner .left{margin-right:20px;}
+#two #banner .left ul{width:235px; border:solid 1px #e2e2e2; background:#f7f7f7; float:left;}
+#two #banner .left ul li{ padding-left:50px; width:185px; border-bottom:solid 1px #e2e2e2; line-height:43px;}
+#two #banner .left .li1{background: url(../img/main1.png) 26px 18px no-repeat;}
+#two #banner .left .li2{background: url(../img/main2.png) 26px 134px no-repeat;}
+#two #banner .left .li3{background: url(../img/main3.png) 26px 13px no-repeat;}
+#two #banner .left .li4{background: url(../img/main4.png) 26px 18px no-repeat;}
+#two #banner .left .li5{background: url(../img/main5.png) 26px 18px no-repeat;}
+#two #banner .left .li6{background: url(../img/main6.png) 26px 16px no-repeat;}
+#two #banner .left .li7{background: url(../img/main7.png) 26px 16px no-repeat; border:none}
+#two #banner .left ul li ul li{ padding-left:40px; width:165px; border-bottom:none; line-height:31px;}
+#two #banner .left ul li ul {border:none; height:128px; background:none; margin-bottom:0}
+#two #banner .left ul li a{ font-size:14px; color:#333333}
+#two #banner .left ul li a:hover{color:#1e88e2}
+#two #banner .left ul li ul li a{font-size:12px;color:#999999}
+#two #banner .left ul li ul li a:hover{color:#1e88e2}
+#two #banner .top .banner{ padding:0 8px 0 8px; float:left; width:620px; height:250px;}
+#two #banner .top .right{ width:230px; float:left;border:solid 1px #e2e2e2; height:250px}
+#two #banner .top .right .tit{line-height:23px; height:20px; width:215px; border-bottom:solid 1px #e2e2e2; background:#f7f7f7; font-size:14px; padding-left:15px}
+#two #banner .top .right ul li{ padding:6px; line-height:20px;}
+#two #banner .bot {padding-top:10px;}
+#two #banner .bot .left1{ height:180px; width:610px}
+#two #banner .bot{height:200px; width:900px;margin-top:20px;}
+#two #banner .bot .left1 tr{height: 56px;}
+#two #banner .bot .left1 td{width:70px; padding-left:40px; border-top:1px solid #e2e2e2; }
+#two #banner .bot .left1 .td1{background:url(../img/icon18.png) 19px 15px no-repeat; }
+#two #banner a{color:#999999}
+#two #banner a:hover{color:#1e88e2}
+#two #banner .bot .left1 td a:hover{color:#333333}
+#two #banner .bot .left1 .td2{background:url(../img/icon19.png) 20px 15px no-repeat;}
+#two #banner .bot .left1 .td3{background:url(../img/icon20.png) 20px 15px  no-repeat;border-bottom:1px solid #e2e2e2;}
+#two #banner .bot .left1 ul { border:1px solid solid; float:left}
+#two #banner .bot .left1 ul li{ float:left; padding-left:10px; border-left:1px solid #e2e2e2; margin-right:10px; width:100px; height:155px; text-align:center; padding-top:20px;}
+#two #banner .bot .left1 ul .li1{ padding-right:10px; border-right:1px solid #e2e2e2}
+#two #banner .bot .left1 ul li img{ width:90px; height:60px;}
+#two #banner .bot .left1 ul li dd{ text-align:center; margin-top:40px}
+#two #banner .bot .left1 ul li p{color:#1e88e2}
+#two #banner .bot .right1 { width:230px;border:solid 1px #e2e2e2; height:165px;float:left; margin-left:25px;}
+#two #banner .bot .right1 .tit{line-height:23px; height:20px; width:215px; border-bottom:solid 1px #e2e2e2; background:#f7f7f7; font-size:14px; padding-left:15px}
+#two #banner .bot .right1 img{width:75px; height:50px; padding-left:78px}
+#two #banner .bot .right1 dt{padding-top:20px;}
+#two #banner .bot .right1 dd{text-align:center; padding-top:15px;}
+#two #content{margin:0 auto; width:1200px}
+#two #content .f1{height:372px; width:1200px;}
+#two #content .f1 .tit{margin-bottom:20px;}
+#two #content .f1 .content{margin-bottom:20px;}
+#two #content table {border-top:1px solid #e2e2e2; border-left:1px solid #e2e2e2; width:964px; height:372px}
+#two #content table td a{color:#666666}
+#two #content table td a:hover{color:#1e88e2}
+#two #content table td{height:130px; width:150px; border-right:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2}
+#two #content table .td1{height:261px; width:300px; background:#94bdf3}
+#two #content table dt{color:#1e88e2; padding:10px}
+#two #content table dt p {font-size:14px;}
+#two #content table dd img{height:80px; padding-right:5px}
+#two #content table .td1 dt p{font-size:24px}
+#two #content table .td1 dt a{color:#FFFFFF;font-size:14px; margin-top:30px }
+#two #content table .td1 dt a:hover{color:#333333;}
+#two #content table .td1 dd img{height:150px; padding-top:30px}

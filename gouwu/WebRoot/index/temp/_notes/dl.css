@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+#dl { height:650px; margin:0 auto;background:url(../img/bgzc.png) repeat-x;}
+#dl a:hover{color:#1e88e2}
+#dl .header{height:86px; width:860px; margin:0 auto}
+#dl .header h1{padding-top:21px;}
+#dl .content{height:564px; width:860px; margin:0 auto}
+#dl .content .left{float:left; width:389px;  padding:37px 0 0 25px;}
+#dl .content .right{float:left; margin-top:14px; height:439px; width:430px; border:1px solid #cccccc; background:#FFFFFF}
+#dl .content  form{padding-left:40px; padding-top:50px;}
+#dl .content  label{color:#1e88e2; padding-top:50px; font-size:14px;}
+#dl .content  input{height:39px; margin-top:25px; width:350px;}
+#dl .content  .yz{ margin-top:25px; width:120px; }
+#dl .content  .yzm{width:122px;}
+#dl .content  .yz img{padding:0 10px 0 10px} 
+#dl .content  .dl{background:#1e88e2; color:#FFFFFF}
+#dl .content  .qita{margin-top:50px; border-top:solid 1px #CCCCCC; padding-left:40px}

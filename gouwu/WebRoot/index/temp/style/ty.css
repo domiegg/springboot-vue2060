@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0; margin:0; text-decoration:none; list-style:none; font-size:12px; font-family:"宋体";}
+#warp{margin:0 auto;}
+.fl{float:left}
+.fr{float:right}
+.pl8{padding-left:8px;}
+.pr8{padding-right:8px;}
+.pl16{padding-left:16px;}
+.mr35{margin-right:35px;}
+.mr24{margin-right:24px;}
+.ml8{margin-left:8px;}
+.ml16{margin-left:16px;}
+.mr8{ margin-right:8px;}
+.mr16{margin-right:16px;}
+.font12{font-size:12px;}
+.font14{font-size:14px;}
+.font24{font-size:24px;}
+.font32{font-size:32px;}
+.pt25{padding-top:25px;}
+.pt16{padding-top:16px;}
+.color8a{color:#8a8a8a}
+.colorlan{color:#1e88e2}
+.bordernone{border-bottom:none}
+a:hover{color:#1e88e2}
+.juzhong{margin:0 auto}

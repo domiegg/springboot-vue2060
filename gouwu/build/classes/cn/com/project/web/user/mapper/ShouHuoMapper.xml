@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.web.user.mapper.ShouHuoMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.web.user.domain.ShouHuo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sname" property="sname" jdbcType="VARCHAR" />
+    <result column="stel" property="stel" jdbcType="VARCHAR" />
+    <result column="youbian" property="youbian" jdbcType="VARCHAR" />
+    <result column="sheng" property="sheng" jdbcType="VARCHAR" />
+    <result column="shi" property="shi" jdbcType="VARCHAR" />
+    <result column="xian" property="xian" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="moren" property="moren" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sname, stel, youbian, sheng, shi, xian, address,u_id,moren
+  </sql>
+  <update id="updateNoMr" parameterType="java.lang.Integer" >
+    update shouhuo
+    set 
+    moren = '0'
+    where u_id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateMr" parameterType="java.lang.Integer" >
+    update shouhuo
+    set 
+    moren = '1'
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+   <select id="selectAdd" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    id, sname, stel, youbian, 
+    sheng, shi, xian, 
+    address,u_id,moren
+    from shouhuo
+    where u_id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shouhuo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shouhuo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.web.user.domain.ShouHuo" >
+    insert into shouhuo (id,u_id, sname, stel, 
+      youbian, sheng, shi, 
+      xian, address)
+    values (#{id,jdbcType=INTEGER},#{uId,jdbcType=INTEGER}, #{sname,jdbcType=VARCHAR}, #{stel,jdbcType=VARCHAR}, 
+      #{youbian,jdbcType=VARCHAR}, #{sheng,jdbcType=VARCHAR}, #{shi,jdbcType=VARCHAR}, 
+      #{xian,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.web.user.domain.ShouHuo" >
+    insert into shouhuo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sname != null" >
+        sname,
+      </if>
+      <if test="stel != null" >
+        stel,
+      </if>
+      <if test="youbian != null" >
+        youbian,
+      </if>
+      <if test="sheng != null" >
+        sheng,
+      </if>
+      <if test="shi != null" >
+        shi,
+      </if>
+      <if test="xian != null" >
+        xian,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sname != null" >
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="stel != null" >
+        #{stel,jdbcType=VARCHAR},
+      </if>
+      <if test="youbian != null" >
+        #{youbian,jdbcType=VARCHAR},
+      </if>
+      <if test="sheng != null" >
+        #{sheng,jdbcType=VARCHAR},
+      </if>
+      <if test="shi != null" >
+        #{shi,jdbcType=VARCHAR},
+      </if>
+      <if test="xian != null" >
+        #{xian,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.web.user.domain.ShouHuo" >
+    update shouhuo
+    <set >
+      <if test="sname != null" >
+        sname = #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="stel != null" >
+        stel = #{stel,jdbcType=VARCHAR},
+      </if>
+      <if test="youbian != null" >
+        youbian = #{youbian,jdbcType=VARCHAR},
+      </if>
+      <if test="sheng != null" >
+        sheng = #{sheng,jdbcType=VARCHAR},
+      </if>
+      <if test="shi != null" >
+        shi = #{shi,jdbcType=VARCHAR},
+      </if>
+      <if test="xian != null" >
+        xian = #{xian,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.web.user.domain.ShouHuo" >
+    update shouhuo
+    set sname = #{sname,jdbcType=VARCHAR},
+      stel = #{stel,jdbcType=VARCHAR},
+      youbian = #{youbian,jdbcType=VARCHAR},
+      sheng = #{sheng,jdbcType=VARCHAR},
+      shi = #{shi,jdbcType=VARCHAR},
+      xian = #{xian,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header{ height:58px; border:1px solid #1e88e2}
+.header h1{padding:10px;}
+.header a{color:#1e88e2; font-size:14px; margin:25px 20px 0 10px; float:left; font-weight:bold}
+.header img{height:30px;}
+.ss{margin:15px 0 0 0; width:380px; height:32px; background:#1e88e2;}
+.header .ss input{color:#d6d6d6; margin:2px 0 0 2px; width:313px; height:26px;}
+.ss a{margin:8px 0 0 8px; color:#FFFFFF; background:url(../img/icon1.png) no-repeat 36px 2px; width:40px; height:26px}
+.ss a:hover{color:#000000; background:url(../img/icon6.png) no-repeat 36px 2px}
+.header .a{margin-left:200px;}
+.content{margin-top:20px;}
+.content .left{ border:1px solid #CCCCCC; padding:10px; float:left; width:130px; margin:10px 70px 0 70px; float:left}
+.content .left ul li{padding:10px 10px 10px 10px;}
+.content .left ul li a{ color:#666666; font-size:14px;}

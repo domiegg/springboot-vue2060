@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.web.user.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.web.user.domain.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <id column="d_id" property="dId" jdbcType="INTEGER" />
+    <result column="u_name" property="name" jdbcType="VARCHAR" />
+    <result column="u_password" property="password" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="u_photo" property="photo" jdbcType="VARCHAR" />
+    <result column="zpassword" property="zpassword" jdbcType="VARCHAR" />
+    <result column="number" property="number" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, u_name, u_password, email, u_photo, zpassword,d_id,number
+  </sql>
+  <select id="login" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where 
+    u_name = #{name} and u_password = #{password}
+  </select>
+  <select id="selectUserList" resultMap="BaseResultMap" parameterType="cn.com.project.web.user.domain.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+     <where>
+           <if test="name !=null and name !=''">
+            and u_name=#{name}
+           </if>
+      </where>
+      order by id desc
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.web.user.domain.User" >
+    insert into user (id, u_name, u_password, 
+      email, u_photo, zpassword
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, #{zpassword,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.web.user.domain.User" >
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="uName != null" >
+        u_name,
+      </if>
+      <if test="uPassword != null" >
+        u_password,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="uPhoto != null" >
+        u_photo,
+      </if>
+      <if test="zpassword != null" >
+        zpassword,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uName != null" >
+        #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uPassword != null" >
+        #{uPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="uPhoto != null" >
+        #{uPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="zpassword != null" >
+        #{zpassword,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.web.user.domain.User" >
+    update user
+    <set >
+      <if test="uName != null" >
+        u_name = #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uPassword != null" >
+        u_password = #{uPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="uPhoto != null" >
+        u_photo = #{uPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="zpassword != null" >
+        zpassword = #{zpassword,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.web.user.domain.User" >
+    update user
+    set u_name = #{name,jdbcType=VARCHAR},
+      u_password = #{password,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      u_photo = #{photo,jdbcType=VARCHAR},
+      zpassword = #{zpassword,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateMr" parameterType="map" >
+    update user
+    set d_id = #{dId}
+    where id = #{uId}
+  </update>
+</mapper>

@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+#footer { height:90px; background:#f6f6f6;}
+#footer ul { width:700px;  height:50px; margin:0 auto;}
+#footer ul li { width:70px; float:left; padding-top:30px;}
+#footer ul li a:hover { color:#808080;}
+#footer .copyright{ width:1200px; height:12px; margin:0 auto; text-align:center;}

@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+#main{width:1200px; margin:0 auto;}
+#main #banner{width:1200px; height:310px;}
+#main #banner ul{height:302px; width:235px; border:solid 1px #e2e2e2; background:#f7f7f7; float:left; margin-bottom:20px}
+#main #banner ul li{height:43px; padding-left:50px; width:185px; border-bottom:solid 1px #e2e2e2; line-height:43px;}
+#main #banner .li1{background: url(../img/main1.png) 26px 18px no-repeat;}
+#main #banner .li2{background: url(../img/main2.png) 26px 18px no-repeat;}
+#main #banner .li3{background: url(../img/main3.png) 26px 18px no-repeat;}
+#main #banner .li4{background: url(../img/main4.png) 26px 18px no-repeat;}
+#main #banner .li5{background: url(../img/main5.png) 26px 18px no-repeat;}
+#main #banner .li6{background: url(../img/main6.png) 26px 16px no-repeat;}
+#main #banner .li7{background: url(../img/main7.png) 26px 16px no-repeat; border:none}
+#main #banner ul li a{ font-size:14px}
+#main #banner .banner{ padding:8px 8px 0 8px; float:left; width:620px; height:292px;}
+#main #banner .right{ width:240px; height:294px; float:left}
+#main #banner .right .tj{ height:20px; width:235px; margin-bottom:20px; padding-bottom:20px}
+#main h2{ font-size:14px; color:#7d716b; float:left; line-height:20px;}
+#main h3{ font-size:12px; color:#b9b9b; font-family:"方正喵呜体"; float:left; line-height:26px;}
+#main #banner .right .tj img{padding-top:15px; float:left; width:100px;}
+#main #banner .right .tj p{float:left; width:90px; padding:15px 0px 0 10px; text-align:center; color:#1e88e2; line-height:25px;}
+#main #banner .right .tj p strong{color:#333333; font-size:14px;}
+#main #banner .right .bk{ width:235px; height:137px; margin-top:20px ; padding-top:}
+#main #banner .right .bk ul{height:101px; width:235px; border:none; background:none; margin-top:10px}
+#main #banner .right .bk ul li{ border-bottom:dashed 1px #CCCCCC; height:25px ; line-height:25px; padding-left:15px; background:url(../img/icon9.png) 5px 12px no-repeat}
+#main #banner .right .bk ul li a{font-size:12px;}
+#main #phb{ margin-top:20px; width:1200px; height:400px;}
+#main #phb .phb{padding-left:8px; height:400px; width:236px; float:left}
+#main h2 span{font-size:14px; color:#1e88e2}
+#main #phb .phb ul{ border-right:solid 1px #e2e2e2; height:355px; width:236px; margin-top:15px; border-top:solid 1px #e2e2e2; border-left:solid 1px #e2e2e2;}
+#main .tit{border-bottom:1px solid #1e88e2; height:20px; margin-top:20px; clear:both}
+
+#main #phb .phb ul li img{width:80px;}
+#main #phb .phb ul li{width:185px; padding-left:36px; height:50px; float:left; padding :10px 10px 10px 40px ; border-bottom:solid 1px #e2e2e2}
+#main #phb .li1{background: url(../img/icon13.png) no-repeat 5px 15px}
+#main #phb .li2{background: url(../img/icon14.png) no-repeat 5px 15px}
+#main #phb .li3{background: url(../img/icon15.png) no-repeat 5px 15px}
+#main #phb .li4{background: url(../img/icon16.png) no-repeat 5px 15px}
+#main #phb .li5{background: url(../img/icon17.png) no-repeat 5px 15px;margin-bottom:5px; padding-bottom:5px}
+#main #phb .phb ul li p span{color:#1e88e2}
+#main #phb .phb ul li p{padding-top:5px; line-height:20px; margin-left:15px;}
+#main #phb .xpss{height:450px; width:830px; margin-left:30px; float:left}
+#main #phb .xpss ul li{float:left; width:150px; padding:20px ; border:#f5f5f5 1px solid}
+#main #phb .xpss ul li img{width:150px; height:100px}
+#main #phb .xpss ul li dd{ text-align:center; margin-top:10px}
+#main #phb .xpss ul{margin-top:15px}
+#main #f1{}
+#main #f1 .tit1{height:28px; width:1200px;border-bottom:1px solid #1e88e2 ;clear:both; position:relative}
+#main #f1 .tit1 p{padding:10px 10px; font-size:14px}
+#main #f1 .con{height:492px; width:1200px; background:url(../img/bg4.png) no-repeat; padding-top:8px; overflow:hidden}
+#main #f1 .con .left{float:left; width:220px; height:300px; background:#f5f5f5;margin:120px 20px 0 100px ;}
+#main #f1 .con .left img{width:150px; height:100px;}
+#main #f1 .con .left dl{}
+#main #f1 .con .left dt{padding:33px ; width:150px ; height:100px;}
+#main #f1 .con .left dd .p{ text-align:center; margin:20px auto; padding-left:0; font-size:12px; color:#999999}
+#main #f1 .con .left dd p{padding-left:70px ; font-size:14px;}
+#main #f1 .con .left dd .aa{ margin-top:20px;margin:0;color:#999999; padding-left:0}
+#main #f1 .con .left dd .aa span{color:#1e88e2}
+#main #f1 .con .left dd a{float:right;background:url(../img/djgm.png) no-repeat; text-align:center; color:#ffffff; padding:2px 0 0 px; width:57px;font-size:12px; height:17px;line-height:12px; margin:top:-5px}
+#main #f1 .con .left dd a:hover{background:url(../img/djgm2.png) no-repeat; font-size:14px;color:#ffffff; width:62px; height:19px; line-height:15px}
+#main #f1 .con2{height:492px; width:1200px; background:url(../img/bg5.png) no-repeat; padding-top:8px; overflow:hidden}
+#main #f1 .con2 .left{float:left; width:220px; height:300px; background:#f5f5f5;margin:120px 20px 0 100px ;}
+#main #f1 .con2 .left img{ height:120px; width:60px}
+#main #f1 .con2 .left dl{}
+#main #f1 .con2 .left dt{padding:23px ; padding-left:75px; width:150px ; height:100px;}
+#main #f1 .con2 .left dd .p{ text-align:center; margin:20px auto; padding-left:0; font-size:12px; color:#999999}
+#main #f1 .con2 .left dd p{padding-left:70px ; font-size:14px;}
+#main #f1 .con2 .left dd .aa{ margin-top:20px;margin:0;color:#999999; padding-left:0}
+#main #f1 .con2 .left dd .aa span{color:#1e88e2}
+#main #f1 .con2 .left dd a{float:right;background:url(../img/djgm.png) no-repeat; text-align:center; color:#ffffff; padding:2px 0 0 px; width:57px;font-size:12px; height:17px;line-height:12px; margin:top:-5px}
+#main #f1 .con2 .left dd a:hover{background:url(../img/djgm2.png) no-repeat; font-size:14px;color:#ffffff; width:62px; height:19px; line-height:15px}
+#main #f1 .con3{height:492px; width:1200px; background:url(../img/bg6.png) no-repeat; padding-top:8px; overflow:hidden}
+#main #f1 .con3 .left{float:left; width:220px; height:300px; background:#f5f5f5;margin:120px 20px 0 100px ;}
+#main #f1 .con3 .left img{ height:120px; width:70px}
+#main #f1 .con3 .left dl{}
+#main #f1 .con3 .left dt{ padding:23px;padding-left:70px ; width:150px ; height:100px; margin:0 auto}
+#main #f1 .con3 .left dd .p{ text-align:center; margin:20px auto; padding-left:0; font-size:12px; color:#999999}
+#main #f1 .con3 .left dd p{padding-left:70px ; font-size:14px;}
+#main #f1 .con3 .left dd .aa{ margin-top:20px;margin:0;color:#999999; padding-left:0}
+#main #f1 .con3 .left dd .aa span{color:#1e88e2}
+#main #f1 .con3 .left dd a{float:right;background:url(../img/djgm.png) no-repeat; text-align:center; color:#ffffff; padding:2px 0 0 px; width:57px;font-size:12px; height:17px;line-height:12px; margin:top:-5px}
+#main #f1 .con3 .left dd a:hover{background:url(../img/djgm2.png) no-repeat; font-size:14px;color:#ffffff; width:62px; height:19px; line-height:15px}
+#main #f1 .more{ float:left;height:5px; width:37px; position:absolute; left:1050px; top:10px}
+#main #f1 .more a{ height:5px; width:37px; color:#333333}
+#main #f1 .tit1 .more a:hover{ height:5px; width:37px; color:#1e88e2;}

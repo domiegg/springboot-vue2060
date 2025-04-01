@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+#zc{margin:0 auto; width:860px}
+#zc a:hover{color:#1e88e2}
+#zc .header{height:86px; width:860px; background:#FFFFFF}
+#zc .header .link{padding:0 20px 0 5px;}
+#zc .header h1{padding-top:21px;}
+#zc .content{height:564px; width:860px; background:#f5f5f5}
+#zc .content .none{width:860px; height:30px;background:#f5f5f5}
+#zc .content .mid{ background:#FFFFFF; border:1px solid #cccccc; height:450px; width:740px; margin:0 auto;}
+#zc .content .mid .left{ margin:10px 13px 0 40px; width:500px}
+#zc .content .mid .left ul{ width:405px;}
+#zc .content .mid .left dt,dd{ float:left}
+#zc .content .mid .left ul li{ height:30px; padding-top:20px; float:left; line-height:30px;}
+#zc .content .mid .left ul li dt{width:100px;}
+#zc .content .mid .left li input{ height:30px; width:200px}
+#zc .content .mid .left .ljzc{border:1px color:#1e88e2 solid}
+#zc .content .mid .left .yzm{width:100px;}
+#zc .content .mid .right2{ border:1px solid #cccccc; background:#f5f5f5; width:135px; height:135px; margin:40px 0 0 20px;}
+#zc .content .mid .ljzc{background:#1e88e2; color:#FFFFFF; }
+#zc .content .mid .top{background:url(../img/icon5.png) no-repeat 6px 12px; line-height:25px; height:54px; padding:10px 0 0 43px;}
+#zc .content .mid .bottom{background:url(../img/bg2.png) no-repeat 3px top;}
+#zc .content .mid .bottom p{text-align:center; line-height:20px;}
+#zc .content .mid .bottom p span{color:#1e88e2;}

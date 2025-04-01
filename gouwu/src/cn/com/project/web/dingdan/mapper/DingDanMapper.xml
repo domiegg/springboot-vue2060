@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.web.dingdan.mapper.DingDanMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.web.dingdan.domain.DingDan" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="number" property="number" jdbcType="VARCHAR" />
+    <result column="t_price" property="tPrice" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="VARCHAR" />
+    <result column="date" property="date" jdbcType="DATE" />
+    <result column="sname" property="sname" jdbcType="VARCHAR" />
+    <result column="u_name" property="uname" jdbcType="VARCHAR" />
+    <result column="price" property="sprice" jdbcType="VARCHAR" />
+    <result column="photo" property="photo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+   id, s_id, u_id, number, t_price, state,date
+     
+  </sql>
+  <update id="updateState" parameterType="cn.com.project.web.dingdan.domain.DingDan" >
+    update dingdan
+     set state = #{state,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  	select
+  	 id, s_id, u_id, number, t_price, state,date
+   	from dingdan
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    d.id, d.s_id, d.u_id, d.number, d.t_price, d.state, d.date,s.sname,s.price,s.photo
+    from dingdan d
+    left join shangpin s
+    on d.s_id=s.id
+    where d.u_id = #{id,jdbcType=INTEGER}
+  </select>
+   <select id="select" resultMap="BaseResultMap" parameterType="cn.com.project.web.dingdan.domain.DingDan" >
+     select 
+    d.id, d.s_id, d.u_id, d.number, d.t_price, d.state, d.date,s.sname,s.price,u.u_name
+    from dingdan d
+    left join shangpin s
+    on d.s_id=s.id
+	LEFT JOIN user u 
+	on d.u_id = u.id
+    <where>
+           <if test="sname !=null and sname !=''">
+            and s.sname=#{sname}
+           </if>
+           <if test="uname !=null and uname !=''">
+            and u.u_name=#{uname}
+           </if>
+      </where>
+      order by d.id desc
+  </select>
+  <select id="selectByState" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    d.id, d.s_id, d.u_id, d.number, d.t_price, d.state, d.date,s.sname,s.price
+    from dingdan d
+    left join shangpin s
+    on d.s_id=s.id
+    where d.u_id = #{id} and d.state = #{state}
+  </select>
+  <select id="selectCountDfh" resultType="int" parameterType="java.lang.Integer" >
+    select 
+    count(*) countDfh
+    from 
+    dingdan
+    where state='0' and u_id = #{id,jdbcType=INTEGER}
+  </select>
+   <select id="selectCountDsh" resultType="int" parameterType="java.lang.Integer" >
+    select 
+    count(*) countDsh
+    from 
+    dingdan
+    where state='1' and u_id = #{id,jdbcType=INTEGER}
+  </select>
+   <select id="selectCountDpj" resultType="int" parameterType="java.lang.Integer" >
+    select 
+    count(*) countDpj
+    from 
+    dingdan
+    where state='2' and u_id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from dingdan
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.web.dingdan.domain.DingDan" >
+    insert into dingdan (id, s_id, u_id, 
+      number, t_price, state, 
+      date)
+    values (#{id,jdbcType=INTEGER}, #{sId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, 
+      #{number,jdbcType=VARCHAR}, #{tPrice,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{date,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.web.dingdan.domain.DingDan" >
+    insert into dingdan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sId != null" >
+        s_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="number != null" >
+        number,
+      </if>
+      <if test="tPrice != null" >
+        t_price,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null" >
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="tPrice != null" >
+        #{tPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.web.dingdan.domain.DingDan" >
+    update dingdan
+    <set >
+      <if test="sId != null" >
+        s_id = #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="number != null" >
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="tPrice != null" >
+        t_price = #{tPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.web.dingdan.domain.DingDan" >
+    update dingdan
+    set s_id = #{sId,jdbcType=INTEGER},
+      u_id = #{uId,jdbcType=INTEGER},
+      number = #{number,jdbcType=VARCHAR},
+      t_price = #{tPrice,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      date = #{date,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

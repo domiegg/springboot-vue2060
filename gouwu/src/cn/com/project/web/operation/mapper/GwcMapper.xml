@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.web.operation.mapper.GwcMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.web.operation.domain.Gwc" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="number" property="number" jdbcType="VARCHAR" />
+    <result column="t_price" property="tPrice" jdbcType="VARCHAR" />
+    <result column="sname" property="sname" jdbcType="VARCHAR" />
+    <result column="color" property="color" jdbcType="VARCHAR" />
+    <result column="price" property="sprice" jdbcType="VARCHAR" />
+    <result column="photo" property="photo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, s_id, u_id, number, t_price
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    g.id, g.s_id, g.u_id, g.number, g.t_price,s.price,s.sname,s.color,
+    (select sum(t_price) from gwc where u_id = #{id}) as count,s.photo 
+    from gwc g 
+    join shangpin s
+    on g.s_id = s.id
+    where g.u_id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectCount" resultType="String" parameterType="java.lang.Integer" >
+    select 
+    sum(t_price) as count
+    from gwc 
+    where u_id = #{id} 
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from gwc
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+   <delete id="emptyGwc" parameterType="java.lang.Integer" >
+    delete from gwc
+    where u_id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.web.operation.domain.Gwc" >
+    insert into gwc (id, s_id, u_id, 
+      number, t_price)
+    values (#{id,jdbcType=INTEGER}, #{sId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, 
+      #{number,jdbcType=VARCHAR}, #{tPrice,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.web.operation.domain.Gwc" >
+    insert into gwc
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sId != null" >
+        s_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="number != null" >
+        number,
+      </if>
+      <if test="tPrice != null" >
+        t_price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null" >
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="tPrice != null" >
+        #{tPrice,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.web.operation.domain.Gwc" >
+    update gwc
+    <set >
+      <if test="sId != null" >
+        s_id = #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="number != null" >
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="tPrice != null" >
+        t_price = #{tPrice,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.web.operation.domain.Gwc" >
+    update gwc
+    set s_id = #{sId,jdbcType=INTEGER},
+      u_id = #{uId,jdbcType=INTEGER},
+      number = #{number,jdbcType=VARCHAR},
+      t_price = #{tPrice,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

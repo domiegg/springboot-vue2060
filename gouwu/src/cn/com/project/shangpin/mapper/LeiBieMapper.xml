@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.shangpin.mapper.LeiBieMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.shangpin.domain.LeiBie" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="mname" property="mname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, mname
+  </sql>
+   <select id="selectLb" resultMap="BaseResultMap" parameterType="cn.com.project.shangpin.domain.LeiBie" >
+    select 
+    <include refid="Base_Column_List" />
+    from leibie
+       <where>
+           <if test="mname !=null and mname !=''">
+            and mname=#{mname}
+           </if>
+      </where>
+  </select>
+  <select id="selectAllLb" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from leibie
+    where 
+    mname!='特价商品' and mname!='新品上市'
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from leibie
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from leibie
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.shangpin.domain.LeiBie" >
+    insert into leibie (id, mname)
+    values (#{id,jdbcType=INTEGER}, #{mname,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.shangpin.domain.LeiBie" >
+    insert into leibie
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="mname != null" >
+        mname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mname != null" >
+        #{mname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.shangpin.domain.LeiBie" >
+    update leibie
+    <set >
+      <if test="mname != null" >
+        mname = #{mname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.shangpin.domain.LeiBie" >
+    update leibie
+    set mname = #{mname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

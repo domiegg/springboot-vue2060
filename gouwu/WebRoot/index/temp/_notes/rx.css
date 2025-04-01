@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+#rx{width:1130px; margin:0 auto; border:#1e88e2 10px solid; }
+#rx h2{height:50px; background:#a0cdeb; width:1085px; line-height:50px; padding-left:45px;}
+#rx .content{ background:#fbf3f0; margin:0 auto; height:1000px; position:relative}
+#rx .content .div1{ padding:11px 16px 0 16px;width:416px; border-right:1px #666666 solid;border-bottom:1px #666666 solid; height:440px}
+#rx .content .div2{ padding:11px 16px 0 16px;width:610px;border-bottom:1px #666666 solid; height:214px;}
+#rx .content .div3{ padding:11px 16px 0 16px;width:610px;border-bottom:1px #666666 solid; height:214px;}
+#rx .content .zs div a{ padding:5px 5px 0 0; float:right;background:url(../img/djgm.png) no-repeat; text-align:center; color:#ffffff; padding-left:1px; width:57px;font-size:12px; height:17px;line-height:12px}
+#rx .content .zs div a:hover{background:url(../img/djgm2.png) no-repeat; font-size:14px;color:#ffffff; width:62px; height:19px; line-height:15px}
+#rx .content .div1 a{padding:60px 5px 0 0;background:url(../img/djgm.png) no-repeat;font-size:12px;color:#ffffff; width:57px; height:17px ; line-height:12px}
+#rx .content .div1 a:hover{background:url(../img/djgm2.png) no-repeat; font-size:14px;color:#ffffff; width:62px; height:19px; line-height:15px}
+#rx .content .list{}
+#rx .content .list ul{padding-left:25px;}
+#rx .content .list ul li{width:225px; float:left; height:320px; padding:40px 25px 0 25px; border:1px #8a8a8a8a solid; height:200px}
+#rx .content .list ul li dt img{height:120px; padding-left:10px}
+#rx .content .list ul li dd a{background:#1e88e2; display:block; width:200px; height:30px; text-align:center; line-height:30px; color:#FFFFFF}
+#rx .content .list ul li dd p{padding:10px 0 10px 0 }
+#rx .content .more{ position:absolute; left:1050px; top:480px;height:5px; width:37px;}
+#rx .content .more a{ height:5px; width:37px; color:#333333}
+#rx .content .more a:hover{ background:#1e88e2; height:5px; width:37px; color:#FFFFFF;}

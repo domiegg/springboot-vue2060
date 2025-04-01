@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header a,p{color:#8a8a8a}
+#header a:hover{color:#1e88e2}
+#header .link{ height:34px; line-height:34px; width:1200px; background:url(../img/bg1.png) repeat-x;}
+#header h1{ width:234px; height:74px; padding:30px 0 0 8px;}
+#header .mid{height:104px; width:1200px;}
+#header .mid .right{ height:104px; width:400px; margin-left:535px; }
+#header  .right .ss{margin:30px 0 0 0; width:380px; height:32px; background:#1e88e2;}
+#header .right .ss .input{color:#d6d6d6; margin:2px 0 0 2px; width:313px; height:26px;}
+#header .ss a{padding:10px 0 0 10px; color:#FFFFFF; background:url(../img/icon1.png) no-repeat 35px 9px; width:50px; height:26px}
+#header .ss a:hover{color:#000000; background:url(../img/icon6.png) no-repeat 35px 9px; width:50px; height:26px}
+#header .menu{height:32px; background:url(../img/bg3.png) repeat-x bottom; width:1200px; position:relative}
+#header .menu .left{ background:#1e88e2; width:244px; height:30px; position:absolute}
+#header .menu .left p{ padding-left:47px; background:url(../img/icon7.png) 7px 11px no-repeat; color:#FFFFFF; height:30px; width:180px; line-height:33px}
+#header .menu .nav{ }
+#header .menu ul{ padding-top:2px;height:30px; width:850px; padding-left:70px; position:absolute; left:244px;}
+#header .menu ul li{ float:left; padding-left:20px;}
+#header .menu ul li a{color:#514e4e; line-height:30px; height:28px; display:block; padding-left:3px}
+#header .menu ul li a span{height:28px; display:block; padding-left:5px; padding-right: 8px;}
+#header .menu ul li a:hover{height:28px;background:url(../img/nav.png) left -28px no-repeat; display:block; color:#FFFFFF}
+#header .menu ul li a:hover span{ height:28px;background:url(../img/nav.png) right 0px no-repeat ; display:block}

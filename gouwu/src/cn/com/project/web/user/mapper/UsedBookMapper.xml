@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.web.user.mapper.UsedBookMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.web.user.domain.UsedBook" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="sname" property="sname" jdbcType="VARCHAR" />
+    <result column="photo" property="photo" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="writer" property="writer" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="VARCHAR" />
+    <result column="number" property="number" jdbcType="VARCHAR" />
+    <result column="miaoshu" property="miaoshu" jdbcType="VARCHAR" />
+    <result column="press" property="press" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, u_id, sname, photo, price, writer, state, number, miaoshu, press
+  </sql>
+   <select id="selectList" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from usedbook
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from usedbook
+    where u_id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from usedbook
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.web.user.domain.UsedBook" >
+    insert into usedbook (id, u_id, sname, 
+      photo, price, writer, 
+      state, number, miaoshu, 
+      press)
+    values (#{id,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{sname,jdbcType=VARCHAR}, 
+      #{photo,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, #{writer,jdbcType=VARCHAR}, 
+      #{state,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, #{miaoshu,jdbcType=VARCHAR}, 
+      #{press,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.web.user.domain.UsedBook" >
+    insert into usedbook
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="sname != null" >
+        sname,
+      </if>
+      <if test="photo != null" >
+        photo,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="writer != null" >
+        writer,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="number != null" >
+        number,
+      </if>
+      <if test="miaoshu != null" >
+        miaoshu,
+      </if>
+      <if test="press != null" >
+        press,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null" >
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="writer != null" >
+        #{writer,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="miaoshu != null" >
+        #{miaoshu,jdbcType=VARCHAR},
+      </if>
+      <if test="press != null" >
+        #{press,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.web.user.domain.UsedBook" >
+    update usedbook
+    <set >
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null" >
+        sname = #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        photo = #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="writer != null" >
+        writer = #{writer,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="miaoshu != null" >
+        miaoshu = #{miaoshu,jdbcType=VARCHAR},
+      </if>
+      <if test="press != null" >
+        press = #{press,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.web.user.domain.UsedBook" >
+    update usedbook
+    set u_id = #{uId,jdbcType=VARCHAR},
+      sname = #{sname,jdbcType=VARCHAR},
+      photo = #{photo,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      writer = #{writer,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      number = #{number,jdbcType=VARCHAR},
+      miaoshu = #{miaoshu,jdbcType=VARCHAR},
+      press = #{press,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
